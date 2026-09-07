@@ -4,7 +4,7 @@
 
 ### Machine-learning Enabled Diagnosis & Intelligent Care
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://YOUR-USERNAME-medici.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Streamlit_Cloud-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://medic-khan.streamlit.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](./LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Framework-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -15,7 +15,7 @@ An AI-powered conversational healthcare assistant that transforms natural-langua
 symptom descriptions into disease predictions with confidence scoring, urgency
 triage, and personalized care guidance.
 
-[Live Demo](https://YOUR-USERNAME-medici.streamlit.app) • [Features](#-key-features) • [Architecture](#-architecture) • [Getting Started](#-getting-started) • [License](#-license)
+[Live Demo](https://medic-khan.streamlit.app) • [Features](#-key-features) • [Architecture](#-system-architecture) • [Getting Started](#-getting-started) • [License](#-license)
 
 </div>
 
@@ -40,6 +40,15 @@ analytics. Every consultation is persisted locally for longitudinal review.
 - **Consultation History** — SQLite-backed history with urgency filtering and CSV export
 - **Rapid Input** — One-tap quick-symptom chips alongside free-text entry
 - **Premium UI** — Responsive dark theme with custom CSS design system
+
+## 🌐 Live Demo
+
+A fully hosted instance runs on Streamlit Community Cloud:
+
+**👉 https://medic-khan.streamlit.app**
+
+No installation required — describe your symptoms (e.g. *"I have fever and cough"*)
+and receive an instant AI triage report.
 
 ## 🧠 How It Works
 
