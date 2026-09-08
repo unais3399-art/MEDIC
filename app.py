@@ -40,22 +40,42 @@ def push(role, content=None, html=None, result=None):
 
 def handle_input(text):
     push('user', content=text)
-    extracted = extract_symptoms(text)
+    extracted = extract_symptoms(text, symptom_names)
     if not extracted:
         push('assistant', content=FALLBACK_MSG)
         return
+
     disease, confidence, probs = predict_disease(
-        symptoms_to_vector(extracted, symptom_names), model, encoder)
+        symptoms_to_vector(extracted, symptom_names), model, encoder
+    )
     recs = get_recommendations(disease, confidence)
-    save_consultation(text, extracted, disease, confidence,
-                      recs.get('urgency', 'Medium'), str(recs))
-    push('assistant',
-         html=build_assistant_html({'disease': disease, 'confidence': confidence,
-                                    'probabilities': probs, 'recommendations': recs,
-                                    'symptoms': extracted}),
-         result={'disease': disease, 'confidence': confidence,
-                 'probabilities': probs, 'recommendations': recs,
-                 'symptoms': extracted})
+    save_consultation(
+        text,
+        extracted,
+        disease,
+        confidence,
+        recs.get('urgency', 'Medium'),
+        str(recs),
+    )
+    push(
+        'assistant',
+        html=build_assistant_html(
+            {
+                'disease': disease,
+                'confidence': confidence,
+                'probabilities': probs,
+                'recommendations': recs,
+                'symptoms': extracted,
+            }
+        ),
+        result={
+            'disease': disease,
+            'confidence': confidence,
+            'probabilities': probs,
+            'recommendations': recs,
+            'symptoms': extracted,
+        },
+    )
 
 
 def latest_result():
