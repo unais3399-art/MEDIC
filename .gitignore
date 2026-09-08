@@ -6,4 +6,5 @@ venv/
 database/*.db
 .DS_Store
 .idea/
-.vscode/
+.vscode/generated_files/
+generated_files/
